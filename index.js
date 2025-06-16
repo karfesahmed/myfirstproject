@@ -7,6 +7,9 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb+srv://karfesahmed:abdou1106a2005@cluster0.oku0kek.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>{
     console.log("connected secssesfully !")
+    app.listen(3000, () => {
+        console.log("🚀 server is running on port 3000");
+    });
     
 }).catch((error)=>{
     console.log("data base error : ",error)
@@ -69,6 +72,3 @@ app.delete("/articles/:article_id",async(req,res)=>{
     res.json(article);
 })
 
-app.listen(3000,()=>{
-    console.log("server is runing");
-});
