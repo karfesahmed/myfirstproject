@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+<body>
+    <h1>My Articles</h1>
+    <hr>
+    <div style="background-color: bisque;color: black;padding: 20px;">
+        <ul style="list-style: none;">
+            <% for( let article of articles) { %>
+                <li style="background-color:rgb(237, 231, 223) ; border: 2px black solid;border-radius: 5px;padding: 7px;margin: 7px;padding-left: 20px;">
+                    <h2 ><%=  article.title %></h2>
+                    
+                    <p><%= article.body  %></p>
+                    <p >likes : <mark style="color: red;"><%= article.numberOfLikes %></mark></p>
+                </li>
+            <% } %>            
+        </ul>
+
+    </div>
+</body>
+</html>
